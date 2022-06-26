@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Conatainer = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #bdc3c7;
+  background-color: white;
 `;
 
 const Button = styled.button`
