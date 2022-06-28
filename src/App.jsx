@@ -1,10 +1,45 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+function App() {
+  return (
+    <>
+      <Global />
+      <Conatainer bgColor='green'>
+        <Button>Hello</Button>
+        <Button bgColor='red'>Hello</Button>
+      </Conatainer>
+      <Conatainer bgColor='blue'>
+        <Button>Hello</Button>
+        <Button bgColor='red'>Hello</Button>
+      </Conatainer>
+      <Conatainer bgColor='red'>
+        <Button>Hello</Button>
+        <Button bgColor='red'>Hello</Button>
+      </Conatainer>
+      <Conatainer bgColor='white'>
+        <Button>Hello</Button>
+        <Button bgColor='red'>Hello</Button>
+      </Conatainer>
+      <Conatainer bgColor='gray'>
+        <Button>Hello</Button>
+        <Button bgColor='red'>Hello</Button>
+      </Conatainer>
+    </>
+  );
+}
+
+const Global = createGlobalStyle`
+  body{
+    background-color: black;
+  }
+`;
 
 const Conatainer = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: white;
+  height: 200px;
+  padding: 5px;
+  background-color: ${props => props.bgColor};
 `;
 
 const Button = styled.button`
@@ -20,16 +55,7 @@ const Button = styled.button`
   &:foucus {
     outline: none;
   }
-  background-color: ${props => (props.danger ? '#e74c3c' : '#2ecc71')};
+  background-color: ${props => props.bgColor || 'skyblue'};
 `;
-
-function App() {
-  return (
-    <Conatainer>
-      <Button>Hello</Button>
-      <Button danger>Hello</Button>
-    </Conatainer>
-  );
-}
 
 export default App;
