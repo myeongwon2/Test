@@ -11,19 +11,19 @@ function App() {
       </Conatainer>
       <Conatainer bgColor='blue'>
         <Button>Hello</Button>
-        <Button bgColor='red'>Hello</Button>
+        <Button bgColor='blue'>Hello</Button>
       </Conatainer>
       <Conatainer bgColor='red'>
         <Button>Hello</Button>
-        <Button bgColor='red'>Hello</Button>
+        <Button bgColor='green'>Hello</Button>
       </Conatainer>
       <Conatainer bgColor='white'>
         <Button>Hello</Button>
-        <Button bgColor='red'>Hello</Button>
+        <Button bgColor='gray'>Hello</Button>
       </Conatainer>
       <Conatainer bgColor='gray'>
-        <Button>Hello</Button>
-        <Button bgColor='red'>Hello</Button>
+        <Button>Hello2</Button>
+        <Button bgColor='black'>Hello</Button>
       </Conatainer>
     </>
   );
