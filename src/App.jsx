@@ -4,11 +4,12 @@ import styled, { createGlobalStyle } from 'styled-components';
 function App() {
   return (
     <>
+      <modals />
       <Global />
-      <Conatainer bgColor='green'>
-        <Button>Hello</Button>
-        <Button bgColor='red'>Hello</Button>
-      </Conatainer>
+      <Head>
+        <LgBt bgColor='white'>언어선택</LgBt>
+        <LgBt bgColor='white'>로그인</LgBt>
+      </Head>
       <Conatainer bgColor='blue'>
         <Button>Hello</Button>
         <Button bgColor='blue'>Hello</Button>
@@ -35,6 +36,23 @@ const Global = createGlobalStyle`
   }
 `;
 
+const Head = styled.div`
+  width: 100%;
+  height: 5vh;
+  text-align: right;
+  background-color: ${props => props.bgColor};
+`;
+const LgBt = styled.button`
+  padding: 5px;
+  margin-right: 10px;
+  min-width: 15vh;
+  height: 5vh;
+  color: black;
+  font-weight: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: ${props => props.bgColor || 'skyblue'};
+`;
 const Conatainer = styled.div`
   width: 100%;
   height: 200px;
